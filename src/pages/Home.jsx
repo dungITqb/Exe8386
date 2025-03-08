@@ -7,7 +7,7 @@ const courts = [
   {
     name: "Sân A",
     price: "90.000 ~ 140.000 VND",
-    address: "123 Đường ABC, Quận 1",
+    address: " 263-265-267-269 Đường 29/3, Hoà Xuân, Cẩm Lệ, Đà Nẵng.",
     images: [
       "https://baobariavungtau.com.vn/dataimages/202405/original/images1948391_Pickleball3.jpg",
     ],
@@ -83,7 +83,6 @@ const Home = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         padding: "2rem",
-        borderRadius: "10px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -169,6 +168,8 @@ const Home = () => {
               borderRadius: "5px",
               padding: "0.5rem 1rem",
               cursor: "pointer",
+              height: "37px",
+              fontWeight: "bold",
             }}
           >
             Tìm kiếm
@@ -207,7 +208,14 @@ const Home = () => {
               alt={court.name}
               style={{ width: "100%", height: "200px", objectFit: "cover" }}
             />
-            <div style={{ padding: "1rem" }}>
+            <div
+              style={{
+                padding: "1rem",
+                display: "flex",
+                flexDirection: "column",
+                gap: "3px", // Tạo khoảng cách giữa các phần tử
+              }}
+            >
               <h3 style={{ margin: "0.5rem 0" }}>{court.name}</h3>
               <p style={{ margin: "0.5rem 0", color: "gray" }}>
                 {court.address}
@@ -215,20 +223,24 @@ const Home = () => {
               <p style={{ margin: "0.5rem 0", fontWeight: "bold" }}>
                 {court.price}
               </p>
-              <Link
-                to={`/court/${index}`}
-                style={{
-                  background: "#ff7f50",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "5px",
-                  padding: "0.5rem 1rem",
-                  cursor: "pointer",
-                  textDecoration: "none",
-                }}
-              >
-                Chi tiết
-              </Link>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <Link
+                  to={`/court/${index}`}
+                  style={{
+                    background: "#ff7f50",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "5px",
+                    padding: "0.5rem 1rem",
+                    cursor: "pointer",
+                    textDecoration: "none",
+                    width: "70px",
+                    textAlign: "center", // Căn giữa chữ bên trong nút
+                  }}
+                >
+                  Chi tiết
+                </Link>
+              </div>
             </div>
           </div>
         ))}

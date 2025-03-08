@@ -10,8 +10,8 @@ const Navbar = () => {
     display: "flex",
     justifyContent: "center",
     gap: "1rem",
-    height: "150px",
-    marginTop: "-10px", // Nhích chữ lên 10px
+    height: "110px",
+    marginTop: "-10px", 
   };
 
   const linkStyle = {
@@ -21,7 +21,7 @@ const Navbar = () => {
     alignItems: "center",
     gap: "0.5rem",
     fontWeight: "bold",
-    marginTop: "-26px", // Kéo chữ lên 5px (số âm = lên, số dương = xuống)
+    marginTop: "-40px",
   };
 
   return (

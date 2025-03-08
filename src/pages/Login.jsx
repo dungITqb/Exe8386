@@ -1,50 +1,131 @@
-import React from 'react';
+import React from "react";
+import backgroundImage from "../asserts/background.avif";
+import { height } from "@fortawesome/free-solid-svg-icons/fa0";
 
 const Login = () => {
   const containerStyle = {
-    padding: '1rem',
-    maxWidth: '1200px',
-    margin: '0 auto',
+    paddingTop: "0.5rem", // Tăng padding để form rộng hơn
+    maxWidth: "1000px", // Tăng chiều rộng form
+    margin: "0 auto",
   };
 
   const formStyle = {
-    backgroundColor: 'white',
-    padding: '1rem',
-    borderRadius: '0.5rem',
-    boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+    backgroundColor: "rgba(255, 255, 255, 0.8)", // Thêm opacity
+    padding: "1.5rem", // Tăng padding để form lớn hơn
+    borderRadius: "0.75rem",
+    boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+    width: "600px",
+    height: "290px",
   };
 
   const inputStyle = {
-    width: '100%',
-    padding: '0.5rem',
-    border: '1px solid #e5e7eb',
-    borderRadius: '0.25rem',
-    marginBottom: '1rem',
+    justifyContent: "center",
+    width: "90%",
+    padding: "1rem", // Tăng kích thước padding để input lớn hơn
+    fontSize: "0.8rem", // Tăng kích thước chữ
+    border: "1px solid #e5e7eb",
+    borderRadius: "0.5rem",
+    marginBottom: "1rem",
+    fontWeight: "bold",
+    margin: "0 auto", // Căn giữa ô input
   };
 
   const buttonStyle = {
-    backgroundColor: '#2563eb',
-    color: 'white',
-    padding: '0.5rem',
-    borderRadius: '0.25rem',
-    width: '100%',
-    border: 'none',
+    background: "#ff7f50",
+    color: "white",
+    padding: "0.75rem",
+    fontSize: "1rem",
+    borderRadius: "0.5rem",
+    width: "50%",
+    border: "none",
+    marginTop: "20px",
+    display: "block",
+    margin: "20px auto", 
+    fontWeight: "bold",
+  };
+
+  const forgotPasswordStyle = {
+    marginTop: "10px",
+    fontSize: "0.9rem",
+    color: "#2563eb",
+    textDecoration: "none",
+    fontWeight: "bold",
+    alignSelf: "center",
+    marginLeft: "-50px", 
+    marginRight: "30px",
   };
 
   return (
-    <div style={containerStyle}>
-      <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>Đăng nhập</h1>
-      <form style={formStyle}>
-        <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem' }}>Email</label>
-          <input type="email" style={inputStyle} />
-        </div>
-        <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem' }}>Mật khẩu</label>
-          <input type="password" style={inputStyle} />
-        </div>
-        <button type="submit" style={buttonStyle}>Đăng nhập</button>
-      </form>
+    <div
+      className="home-container"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        padding: "1rem",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        minHeight: "50vh", // Giảm chiều dài tối thiểu
+        maxHeight: "90vh", // Giới hạn chiều dài tối đa
+        height: "357px", // Cố định chiều cao hợp lý
+      }}
+    >
+      <div style={containerStyle}>
+        <form style={formStyle}>
+          <h1
+            style={{
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              marginBottom: "0.8rem",
+              marginTop: "0",
+            }}
+          >
+            Đăng nhập
+          </h1>
+          <div style={{ marginLeft: "40px", marginBottom: "10px" }}>
+            <label
+              style={{
+                display: "block",
+                marginBottom: "0.5rem",
+                fontWeight: "bold",
+              }}
+            >
+              Email
+            </label>
+            <input type="email" style={inputStyle} placeholder="Enter email" />
+          </div>
+          <div style={{ marginLeft: "40px" }}>
+            <label
+              style={{
+                display: "block",
+                marginBottom: "0.5rem",
+                fontWeight: "bold",
+              }}
+            >
+              Mật khẩu
+            </label>
+            <input
+              type="password"
+              style={inputStyle}
+              placeholder="Enter password"
+            />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              width: "100%",
+            }}
+          >
+            <button type="submit" style={buttonStyle}>
+              Đăng nhập
+            </button>
+            <a href="/forgot-password" style={forgotPasswordStyle}>
+              Quên mật khẩu?
+            </a>
+          </div>
+        </form>
+      </div>{" "}
     </div>
   );
 };

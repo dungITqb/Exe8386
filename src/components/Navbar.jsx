@@ -1,23 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Home, Calendar, Users } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Home, Calendar, Users } from "lucide-react";
 
 const Navbar = () => {
   const navStyle = {
-    backgroundColor: '#1e40af',
-    color: 'white',
-    padding: '0.75rem',
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '1rem',
+    backgroundColor: "#2e8b57",
+    color: "white",
+    padding: "0.75rem",
+    display: "flex",
+    justifyContent: "center",
+    gap: "1rem",
+    height: "150px",
+    marginTop: "-10px", // Nhích chữ lên 10px
   };
 
   const linkStyle = {
-    color: 'white',
-    textDecoration: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    gap: '0.5rem',
+    color: "white",
+    textDecoration: "none",
+    display: "flex",
+    alignItems: "center",
+    gap: "0.5rem",
+    fontWeight: "bold",
+    marginTop: "-26px", // Kéo chữ lên 5px (số âm = lên, số dương = xuống)
   };
 
   return (

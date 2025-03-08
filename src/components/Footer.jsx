@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   const footerStyle = {
-    backgroundColor: '#2563eb',
-    color: 'white',
-    padding: '1rem',
-    textAlign: 'center',
+    backgroundColor: "#3CB371",
+    color: "white",
+    padding: "1rem",
+    textAlign: "center",
   };
 
   return (

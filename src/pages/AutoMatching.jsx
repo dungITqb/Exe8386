@@ -27,7 +27,7 @@ const AutoMatching = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height: "53vh"
+        height: "509px"
       }}
     >
       <div
@@ -43,17 +43,18 @@ const AutoMatching = () => {
         }}
       >
         <h1
-          style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1rem" }}
+          style={{ fontSize: "2.5rem", fontWeight: "bold", marginBottom: "2rem" }}
         >
           Tự động ghép đôi
         </h1>
         <form onSubmit={handleSubmit}>
-          <div style={{ marginBottom: "1rem", textAlign: "left" }}>
+          <div style={{ marginBottom: "2rem", textAlign: "left" }}>
             <label
               style={{
                 fontWeight: "bold",
                 display: "block",
-                marginBottom: "0.5rem",
+                marginBottom: "1rem",
+                fontSize: "1.7rem"
               }}
             >
               Sân
@@ -81,7 +82,8 @@ const AutoMatching = () => {
               style={{
                 fontWeight: "bold",
                 display: "block",
-                marginBottom: "0.5rem",
+                marginBottom: "1rem",
+                fontSize: "1.7rem"
               }}
             >
               Giờ
@@ -113,7 +115,7 @@ const AutoMatching = () => {
               fontSize: "1rem",
               fontWeight: "bold",
               display: "block",
-              margin: "0 auto",
+              margin: "2rem auto",
             }}
           >
             Bắt đầu ghép đôi

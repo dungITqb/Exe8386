@@ -17,14 +17,16 @@ const Header = () => {
     padding: "0.5rem 1rem",
     borderRadius: "0.25rem",
     textDecoration: "none",
-     fontWeight: "bold"
+    fontWeight: "bold",
   };
 
   return (
     <header style={headerStyle}>
-      <h1 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-        Pickleball Booking
-      </h1>
+      <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+        <h1 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
+          Pickleball Booking
+        </h1>
+      </Link>
       <div style={{ display: "flex", gap: "1rem" }}>
         <Link to="/login" style={buttonStyle}>
           Đăng nhập

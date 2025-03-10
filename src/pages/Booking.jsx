@@ -1,7 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import backgroundImage from "../asserts/background.avif";
 
 const Booking = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/payment");
+  };
+
   return (
     <div
       className="home-container"
@@ -32,7 +40,7 @@ const Booking = () => {
         >
           Đặt sân
         </h1>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div style={{ marginBottom: "1rem", textAlign: "left" }}>
             <label
               style={{
@@ -52,6 +60,7 @@ const Booking = () => {
                 borderRadius: "0.5rem",
                 fontSize: "1rem",
               }}
+              required
             />
           </div>
           <div style={{ marginBottom: "1rem", textAlign: "left" }}>
@@ -73,6 +82,7 @@ const Booking = () => {
                 borderRadius: "0.5rem",
                 fontSize: "1rem",
               }}
+              required
             />
           </div>
           <button

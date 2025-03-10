@@ -27,7 +27,7 @@ const AutoMatching = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        minHeight: "30vh",
+        height: "53vh"
       }}
     >
       <div
@@ -39,6 +39,7 @@ const AutoMatching = () => {
           maxWidth: "500px",
           width: "100%",
           textAlign: "center",
+          height: "100%"
         }}
       >
         <h1
@@ -102,7 +103,7 @@ const AutoMatching = () => {
           <button
             type="submit"
             style={{
-              backgroundColor: "#007bff",
+              backgroundColor: "#fb923c",
               color: "white",
               padding: "0.75rem",
               borderRadius: "0.5rem",

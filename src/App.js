@@ -1,21 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import CourtDetails from './pages/CourtDetails';
-import Booking from './pages/Booking';
-import Payment from './pages/Payment';
-import AutoMatching from './pages/AutoMatching';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import CourtDetails from "./pages/CourtDetails";
+import Booking from "./pages/Booking";
+import Payment from "./pages/Payment";
+import AutoMatching from "./pages/AutoMatching";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import ForgotPassword from "./pages/ForgotPassword";
+import Otp from "./pages/Otp";
 
 function App() {
   return (
     <Router>
       <Header />
-      <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -24,6 +26,8 @@ function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/auto-matching" element={<AutoMatching />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
+        <Route path="/otp" element={<Otp />} />
       </Routes>
       <Footer />
     </Router>

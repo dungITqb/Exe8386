@@ -10,8 +10,8 @@ const Navbar = () => {
     display: "flex",
     justifyContent: "center",
     gap: "1rem",
-    height: "110px",
-    marginTop: "-10px", 
+    height: "90px",
+    marginTop: "-10px",
   };
 
   const linkStyle = {

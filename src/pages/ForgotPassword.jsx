@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import backgroundImage from "../asserts/background.avif";
 
-const Login = () => {
+const ForgotPassword = () => {
   const containerStyle = {
     paddingTop: "0.5rem", // Tăng padding để form rộng hơn
     maxWidth: "1000px", // Tăng chiều rộng form
@@ -14,44 +15,20 @@ const Login = () => {
     borderRadius: "0.75rem",
     boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
     width: "600px",
-    height: "290px",
+    height: "240px",
+    marginTop: "30px",
   };
 
   const inputStyle = {
     justifyContent: "center",
     width: "90%",
     padding: "1rem", // Tăng kích thước padding để input lớn hơn
-    fontSize: "0.8rem", // Tăng kích thước chữ
+    fontSize: "0.9rem", // Tăng kích thước chữ
     border: "1px solid #e5e7eb",
     borderRadius: "0.5rem",
     marginBottom: "1rem",
     fontWeight: "bold",
     margin: "0 auto", // Căn giữa ô input
-  };
-
-  const buttonStyle = {
-    background: "#ff7f50",
-    color: "white",
-    padding: "0.75rem",
-    fontSize: "1rem",
-    borderRadius: "0.5rem",
-    width: "50%",
-    border: "none",
-    marginTop: "20px",
-    display: "block",
-    margin: "20px auto",
-    fontWeight: "bold",
-  };
-
-  const forgotPasswordStyle = {
-    marginTop: "10px",
-    fontSize: "0.9rem",
-    color: "#2563eb",
-    textDecoration: "none",
-    fontWeight: "bold",
-    alignSelf: "center",
-    marginLeft: "-50px",
-    marginRight: "30px",
   };
 
   return (
@@ -78,9 +55,10 @@ const Login = () => {
               fontWeight: "bold",
               marginBottom: "0.8rem",
               marginTop: "0",
+              marginBottom: "30px",
             }}
           >
-            Đăng nhập
+            Quên mật khẩu
           </h1>
           <div style={{ marginLeft: "40px", marginBottom: "10px" }}>
             <label
@@ -90,38 +68,38 @@ const Login = () => {
                 fontWeight: "bold",
               }}
             >
-              Email
+              Nhập email
             </label>
             <input type="email" style={inputStyle} placeholder="Enter email" />
           </div>
-          <div style={{ marginLeft: "40px" }}>
-            <label
-              style={{
-                display: "block",
-                marginBottom: "0.5rem",
-                fontWeight: "bold",
-              }}
-            >
-              Mật khẩu
-            </label>
-            <input
-              type="password"
-              style={inputStyle}
-              placeholder="Enter password"
-            />
-          </div>
+
           <div
             style={{
               display: "flex",
               width: "100%",
             }}
           >
-            <button type="submit" style={buttonStyle}>
-              Đăng nhập
-            </button>
-            <a href="/forgotpassword" style={forgotPasswordStyle}>
-              Quên mật khẩu?
-            </a>
+            <Link
+              style={{
+                background: "#ff7f50",
+                color: "white",
+                padding: "0.75rem",
+                fontSize: "1.1rem",
+                borderRadius: "0.5rem",
+                width: "50%",
+                border: "none",
+                marginTop: "20px",
+                display: "block",
+                margin: "20px auto",
+                fontWeight: "bold",
+                textDecoration: "none",
+                height: " 20px",
+                textAlign: "center",
+              }}
+              to={`/otp`}
+            >
+              Enter
+            </Link>
           </div>
         </form>
       </div>{" "}
@@ -129,4 +107,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgotPassword;

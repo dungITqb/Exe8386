@@ -1,7 +1,7 @@
 import React from "react";
 import backgroundImage from "../asserts/background.avif";
 
-const Login = () => {
+const Otp = () => {
   const containerStyle = {
     paddingTop: "0.5rem", // Tăng padding để form rộng hơn
     maxWidth: "1000px", // Tăng chiều rộng form
@@ -14,7 +14,8 @@ const Login = () => {
     borderRadius: "0.75rem",
     boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
     width: "600px",
-    height: "290px",
+    height: "240px",
+    marginTop: "30px",
   };
 
   const inputStyle = {
@@ -43,17 +44,6 @@ const Login = () => {
     fontWeight: "bold",
   };
 
-  const forgotPasswordStyle = {
-    marginTop: "10px",
-    fontSize: "0.9rem",
-    color: "#2563eb",
-    textDecoration: "none",
-    fontWeight: "bold",
-    alignSelf: "center",
-    marginLeft: "-50px",
-    marginRight: "30px",
-  };
-
   return (
     <div
       className="home-container"
@@ -76,40 +66,24 @@ const Login = () => {
             style={{
               fontSize: "1.5rem",
               fontWeight: "bold",
-              marginBottom: "0.8rem",
+              marginBottom: "1rem",
               marginTop: "0",
+              marginBottom: "50px",
             }}
           >
-            Đăng nhập
+            Nhập OTP
           </h1>
-          <div style={{ marginLeft: "40px", marginBottom: "10px" }}>
+          <div style={{ marginLeft: "40px", marginBottom: "30px" }}>
             <label
               style={{
                 display: "block",
                 marginBottom: "0.5rem",
                 fontWeight: "bold",
               }}
-            >
-              Email
-            </label>
-            <input type="email" style={inputStyle} placeholder="Enter email" />
+            ></label>
+            <input type="email" style={inputStyle} placeholder="Enter OTP" />
           </div>
-          <div style={{ marginLeft: "40px" }}>
-            <label
-              style={{
-                display: "block",
-                marginBottom: "0.5rem",
-                fontWeight: "bold",
-              }}
-            >
-              Mật khẩu
-            </label>
-            <input
-              type="password"
-              style={inputStyle}
-              placeholder="Enter password"
-            />
-          </div>
+
           <div
             style={{
               display: "flex",
@@ -117,11 +91,8 @@ const Login = () => {
             }}
           >
             <button type="submit" style={buttonStyle}>
-              Đăng nhập
+              Gửi OTP
             </button>
-            <a href="/forgotpassword" style={forgotPasswordStyle}>
-              Quên mật khẩu?
-            </a>
           </div>
         </form>
       </div>{" "}
@@ -129,4 +100,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Otp;
